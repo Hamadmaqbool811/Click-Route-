@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+<!-- Add the Stripe.js script -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<button id="checkout-btn">Buy Course</button>
+
+<script>
+    // Initialize Stripe
+    var stripe = Stripe('your-public-key');
+    
+    document.getElementById('checkout-btn').addEventListener('click', function() {
+        stripe.redirectToCheckout({
+            lineItems: [{ price: 'price_id', quantity: 1 }],
+            mode: 'payment',
+            successUrl: window.location.origin + '/success',
+            cancelUrl: window.location.origin + '/cancel',
+        }).then(function(result) {
+            if (result.error) {
+                console.error(result.error.message);
+            }
+        });
+    });
+</script>
+    
+</body>
+</html>

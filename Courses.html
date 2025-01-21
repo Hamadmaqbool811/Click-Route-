@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 80%;
+      max-width: 1200px;
+      margin: 20px;
+    }
+
+    .course-card {
+      background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
+      border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      border-color: #3498db;
+    }
+
+    .course-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .course-card p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .course-card .button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .course-card .button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .courses-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .courses-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="courses-container">
+    <!-- Web Development Course -->
+    <div class="course-card" onclick="window.location.href='web-development.html';">
+      <h3>Web Development</h3>
+      <p>Learn how to build modern websites and web applications using HTML, CSS, JavaScript, and more.</p>
+      <a href="web-development.html" class="button">Explore Course</a>
+    </div>
+
+    <!-- Machine Learning Course -->
+    <div class="course-card" onclick="window.location.href='machine-learning.html';">
+      <h3>Machine Learning</h3>
+      <p>Master machine learning algorithms and build predictive models using Python and TensorFlow.</p>
+      <a href="machine-learning.html" class="button">Explore Course</a>
+    </div>
+
+    <!-- Data Science Course -->
+    <div class="course-card" onclick="window.location.href='data-science.html';">
+      <h3>Data Science</h3>
+      <p>Discover the world of data analysis, data visualization, and how to derive meaningful insights from data.</p>
+      <a href="data-science.html" class="button">Explore Course</a>
+    </div>
+
+    <!-- Digital Marketing Course -->
+    <div class="course-card" onclick="window.location.href='digital-marketing.html';">
+      <h3>Digital Marketing</h3>
+      <p>Learn the fundamentals of SEO, social media marketing, Google Ads, and more to boost your online presence.</p>
+      <a href="digital-marketing.html" class="button">Explore Course</a>
+    </div>
+    <div class="course-card" onclick="window.location.href='digital-marketing.html';">
+      <h3>UI/UX Design</h3>
+      <p>Learn the fundamentals of SEO, social media marketing, Google Ads, and more to boost your online presence.</p>
+      <a href="digital-marketing.html" class="button">Explore Course</a>
+    </div>
+
+    <!-- Graphic Design Course -->
+    <div class="course-card" onclick="window.location.href='graphic-design.html';">
+      <h3>Graphic Design</h3>
+      <p>Explore the world of visual creativity and design using tools like Photoshop, Illustrator, and more.</p>
+      <a href="graphic-design.html" class="button">Explore Course</a>
+    </div>
+
+    <!-- Mobile App Development Course -->
+    <div class="course-card" onclick="window.location.href='mobile-app-development.html';">
+      <h3>Mobile App Development</h3>
+      <p>Learn how to develop mobile applications for iOS and Android using modern development tools and languages.</p>
+      <a href="mobile-app-development.html" class="button">Explore Course</a>
+    </div>
+  </div>
+
+</body>
+</html>

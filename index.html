@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Route</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <h1>Welcome To Click Route</h1>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Find me...">
+        <button class="search-button">Search</button>
+ 
+     </div>
+    <ul>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="Certificates.html">Certificates</a></li>
+        <li><a href="News.html">News</a></li>
+    </ul>
+   
+    <div class="button-container">
+        <a href="login.html">
+        <button class="LOGIN-btn"onclick="Login()">LOGIN</button></a>
+        <a href="sign up.html">
+       <button class="SIGN UP-btn"onclick="SIGN UP()">SIGN UP</button></a>
+
+    </div>
+  <!-- Just an image without a link -->
+<img src="favicon.ico" alt="icon">
+<style>
+    /* Reset default styles */
+    h2, p, ul, li {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Body and background */
+    body {
+        background-color: #f4f4f4;
+        line-height: 1.6;
+        color: #333;
+        
+    }
+
+    /* Header Section */
+    header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    
+
+    /* Content Section */
+    .content-section {
+        margin-top: 40px;
+    }
+
+    .category-title {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .content-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .content-item {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+        width: 220px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .content-item:hover {
+        background-color: #45a049;
+    }
+
+    .content-item.hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h2>Click Route - Learn, Explore, Grow</h2>
+</header>
+
+
+
+<!-- Courses Section -->
+<section class="content-section" id="coursesSection">
+    <h2 class="category-title">Courses</h2>
+    <div class="content-list" id="coursesList">
+        <div class="content-item"><a href="web-development.html">Web Development</a></div>
+        <div class="content-item"><a href="data-science.html">Data Science</a></div>
+        <div class="content-item"><a href="machine-learning.html">Machine Learning</a></div>
+        <div class="content-item"><a href="ui-ux.html">UI/UX Design</a></div>
+        <div class="content-item"><a href="digital-marketing.html">Digital Marketing</a></div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section class="content-section" id="newsSection">
+    <h2 class="category-title">News</h2>
+    <div class="content-list" id="newsList">
+        <div class="content-item">New JavaScript Features</div>
+        <div class="content-item">Data Privacy Updates</div>
+        <div class="content-item">Design Trends for 2025</div>
+        <div class="content-item">Artificial Intelligence in 2025</div>
+        <div class="content-item">Business Strategies for Growth</div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="content-section" id="productsSection">
+    <h2 class="category-title">Products</h2>
+    <div class="content-list" id="productsList">
+        <div class="content-item">Laptop</div>
+        <div class="content-item">Smartphone</div>
+        <div class="content-item">Headphones</div>
+        <div class="content-item">Smart Watch</div>
+        <div class="content-item">Tablet</div>
+    </div>
+</section>
+
+<!-- Certificates Section -->
+<section class="content-section" id="certificatesSection">
+    <h2 class="category-title">Certificates</h2>
+    <div class="content-list" id="certificatesList">
+        <div class="content-item">Web Development Certification</div>
+        <div class="content-item">Data Science Certification</div>
+        <div class="content-item">AI and ML Certification</div>
+        <div class="content-item">Digital Marketing Certificate</div>
+        <div class="content-item">Graphic Design Certification</div>
+    </div>
+</section>
+<script>
+   
+    // Function to filter courses, news, products, and certificates based on search input
+    function searchContent() {
+        let searchInput = document.getElementById("searchBar").value.toLowerCase(); // Get the search input
+        let contentSections = ['courses', 'news', 'products', 'certificates'];
+
+        // Loop through each content section
+        contentSections.forEach(section => {
+            let items = document.querySelectorAll(`#${section}List .content-item`); // Get all items in the section
+            items.forEach(item => {
+                let content = item.textContent.toLowerCase(); // Get the text of the content item
+                if (content.indexOf(searchInput) > -1) {
+                    item.classList.remove('hidden'); // Show content item
+                } else {
+                    item.classList.add('hidden'); // Hide content item
+                }
+            });
+        });
+    }
+</script>
+
+
+<script src="scipt.js"></script> 
+</body>
+</html>
