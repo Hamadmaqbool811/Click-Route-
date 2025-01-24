@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Applications in Robotics & AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: transparent;
+            color: #fff;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar a:hover {
+            background-color: #00eaff;
+            border-radius: 5px;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: center;
+        }
+        h2, h3 {
+            color: #2575fc;
+        }
+        .method-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .method-section button {
+            padding: 10px 20px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .method-section button:hover {
+            background-color: #00eaff;
+        }
+        .chatbot {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            width: 80%;
+        }
+        .chatbot input {
+            width: 80%;
+            padding: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2575fc;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">AI Projects</a>
+        <a href="#">Robotics</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Python in Robotics & AI</h1>
+        <p>Explore the various ways Python is used in robotics, AI, and more.</p>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Applications of Python</h2>
+
+        <!-- Robotics Section -->
+        <div class="method-section">
+            <h3>1. Robotics with Python</h3>
+            <p>Python is commonly used in robotics to control motors, sensors, and actuators. Libraries like `RPi.GPIO` for Raspberry Pi or `PySerial` for communication with embedded systems make robotics development accessible.</p>
+            <button onclick="alert('Python in Robotics tutorial coming soon!')">Learn More</button>
+        </div>
+
+        <!-- AI and Machine Learning Section -->
+        <div class="method-section">
+            <h3>2. AI & Machine Learning with Python</h3>
+            <p>Python has powerful libraries like `TensorFlow`, `PyTorch`, and `scikit-learn` to build machine learning and deep learning models. AI applications such as image recognition, natural language processing, and predictive analytics can be built with Python.</p>
+            <button onclick="alert('AI and ML with Python tutorial coming soon!')">Learn More</button>
+        </div>
+
+        <!-- Speech Recognition Section -->
+        <div class="method-section">
+            <h3>3. Speech Recognition with Python</h3>
+            <p>Python provides libraries like `SpeechRecognition` to convert speech into text. This is used in various applications like virtual assistants and voice-controlled robots.</p>
+            <button onclick="alert('Speech Recognition tutorial coming soon!')">Learn More</button>
+        </div>
+
+        <!-- Chatbot Section -->
+        <div class="method-section">
+            <h3>4. Build Your Own Chatbot with Python</h3>
+            <p>Python can be used to create intelligent chatbots using frameworks like `ChatterBot` or `Rasa`. These bots can respond to user queries and perform tasks based on natural language input.</p>
+            <button onclick="alert('Chatbot tutorial coming soon!')">Learn More</button>
+        </div>
+
+        <!-- How to Train AI Section -->
+        <div class="method-section">
+            <h3>5. How to Train AI with Python</h3>
+            <p>Python allows you to train AI models with datasets. Using libraries like `scikit-learn`, `TensorFlow`, and `Keras`, you can train models for image recognition, speech-to-text, and more.</p>
+            <button onclick="alert('AI training tutorial coming soon!')">Learn More</button>
+        </div>
+
+        <!-- Quick Response Chatbot Example -->
+        <div class="method-section chatbot">
+            <h3>Quick Response Chatbot (Python Powered)</h3>
+            <p>Ask me anything about Python!</p>
+            <input type="text" id="userInput" placeholder="Ask a question...">
+            <button onclick="chatWithBot()">Ask</button>
+            <div id="chatResponse"></div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Python Robotics & AI. Learn, Build, Innovate!</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Chatbot function
+        function chatWithBot() {
+            var userQuestion = document.getElementById('userInput').value;
+            var response = document.getElementById('chatResponse');
+            
+            if (userQuestion.toLowerCase().includes('python')) {
+                response.innerHTML = "Python is a versatile programming language used in AI, robotics, data science, and more!";
+            } else if (userQuestion.toLowerCase().includes('robotics')) {
+                response.innerHTML = "Robotics involves using Python to control hardware such as motors and sensors.";
+            } else if (userQuestion.toLowerCase().includes('ai')) {
+                response.innerHTML = "AI refers to creating systems that can perform tasks that typically require human intelligence, and Python is one of the best languages for building AI.";
+            } else {
+                response.innerHTML = "Sorry, I didn't understand that. Try asking about Python, Robotics, or AI.";
+            }
+        }
+    </script>
+
+</body>
+</html>

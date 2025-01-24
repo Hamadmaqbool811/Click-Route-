@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .section-header {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+           
+            width: 100%;
+            bottom: 0;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Development Course</h1>
+    </header>
+
+    <section>
+        <div class="section-header">1. Introduction to Web Development</div>
+        <p>Web development involves building websites and web applications using core technologies:</p>
+        <ul>
+            <li><strong>HTML</strong>: Structure of the web page.</li>
+            <li><strong>CSS</strong>: Styling of the webpage.</li>
+            <li><strong>JavaScript</strong>: Interactivity and dynamic behavior.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="section-header">2. HTML Basics</div>
+        <h2>HTML Structure</h2>
+        <p>HTML defines the structure of a webpage using various elements. Let's look at a basic HTML structure:</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;HTML Basics&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to Web Development&lt;/h1&gt;
+        &lt;p&gt;This is a basic webpage.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p>The above code creates a simple webpage with a heading and a paragraph.</p>
+
+        <h2>HTML Elements</h2>
+        <p>HTML uses elements to define structure. For example:</p>
+        <ul>
+            <li>&lt;p&gt;: Paragraphs</li>
+            <li>&lt;h1&gt; to &lt;h6&gt;: Headings</li>
+            <li>&lt;a&gt;: Links</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="section-header">3. CSS Basics</div>
+        <h2>Styling HTML Elements</h2>
+        <p>CSS is used to style the HTML elements. You can change the color, size, layout, and more.</p>
+        <pre>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #4CAF50;
+}
+        </pre>
+        <p>The above CSS code changes the background color and the text color of the page.</p>
+
+        <h2>Flexbox Layout</h2>
+        <p>Flexbox is a layout model that helps design complex layouts with ease.</p>
+        <pre>
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+}
+        </pre>
+        <p>This creates a flexible layout where items inside the container will be spaced equally.</p>
+    </section>
+
+    <section>
+        <div class="section-header">4. JavaScript Basics</div>
+        <h2>Variables and Functions</h2>
+        <p>JavaScript is used to make webpages interactive. It includes variables, functions, and events.</p>
+        <pre>
+let name = "John";
+let age = 25;
+
+function greet() {
+    alert("Hello, " + name + "!");
+}
+        </pre>
+        <p>The above code declares variables and a function that displays an alert with the name.</p>
+
+        <h2>Event Handling</h2>
+        <p>Events like button clicks can trigger actions in JavaScript.</p>
+        <pre>
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+        </pre>
+        <button id="myButton" class="button">Click Me</button>
+        <p>Click the button to trigger the alert.</p>
+    </section>
+
+    <section>
+        <div class="section-header">5. Combining HTML, CSS, and JavaScript</div>
+        <h2>Interactive Webpage Example</h2>
+        <p>Now let's combine HTML, CSS, and JavaScript into one interactive webpage.</p>
+        <pre>
+<!DOCTYPE html>
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Interactive Page&lt;/title&gt;
+        &lt;style&gt;
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            p {
+                font-size: 18px;
+                color: #333;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Interactive Webpage&lt;/h1&gt;
+        &lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+        &lt;p id="demo"&gt;Original Content&lt;/p&gt;
+        
+        &lt;script&gt;
+            document.getElementById("myButton").addEventListener("click", function() {
+                document.getElementById("demo").innerHTML = "Content has been changed!";
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p>This example uses HTML, CSS, and JavaScript to change the content of the paragraph when the button is clicked.</p>
+    </section>
+
+    <footer>
+        <p>Created by Your Click Route | Web Development Course</p>
+    </footer>
+
+    <script>
+        // JavaScript code to handle button click and content change
+        document.getElementById("myButton").addEventListener("click", function() {
+            document.getElementById("demo").innerHTML = "Content has been changed!";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Full Course</title>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+    
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      color: white;
+    }
+    .navbar .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    .navbar .nav-links li {
+      margin: 0 15px;
+    }
+    .navbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    .navbar .nav-links a:hover {
+      color: #ff6347;
+    }
+
+    /* Course Content */
+    .course-content {
+      padding: 80px 20px 20px;
+    }
+    .course-content h1 {
+      font-size: 32px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Code Block Styles */
+    .code-block {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .code-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .code-block pre {
+      background-color: #2d2d2d;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+    .code-block .copy-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .code-block .copy-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Chatbot Styles */
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0078d4;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 100;
+    }
+    .chatbot-window {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: white;
+      width: 300px;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    .chatbot-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .chatbot-body {
+      display: flex;
+      flex-direction: column;
+    }
+    .messages {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .chatbot-body input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .chatbot-body .send-btn {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .chatbot-body .send-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer-content {
+      margin-bottom: 20px;
+    }
+    .social-icons{
+        margin: 20px;
+        justify-content: flex-start;
+    display: flex;
+
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    .social-icons a:hover {
+      transform: scale(2.1rem); /* Enlarge icon */
+      color: aqua; /* Change background color */
+      transform: scale(1.8);
+    }
+    
+
+     </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CSS Course</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="course-content">
+    <h1>Learn CSS with Code Examples</h1>
+
+    <!-- Example Code Block 1 -->
+    <div class="code-block">
+      <h2>1. Introduction to CSS</h2>
+      <pre><code class="css">
+/* Example CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+      </code></pre>
+      <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+      <p>Explanation: This CSS example sets the font for the body to Arial and gives a background color. The h1 element is centered with padding and changed to a dark color.</p>
+    </div>
+
+    <!-- Example Code Block 2 -->
+    <div class="code-block">
+      <h2>2. CSS Selectors</h2>
+      <pre><code class="css">
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Class Selector */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ID Selector */
+#header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+      </code></pre>
+      <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+      <p>Explanation: This example demonstrates the use of different CSS selectors. The universal selector targets all elements, the class selector targets elements with a specific class, and the ID selector targets a unique element.</p>
+    </div>
+
+    <!-- Example Code Block 3 -->
+    <div class="code-block">
+      <h2>3. Box Model</h2>
+      <pre><code class="css">
+/* Box Model Example */
+div {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 20px;
+}
+      </code></pre>
+      <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+      <p>Explanation: The box model includes content, padding, border, and margin. In this example, we have set a width, height, padding, border, and margin to the div element.</p>
+    </div>
+
+    <!-- Example Code Block 4 -->
+    <div class="code-block">
+      <h2>4. Flexbox Layout</h2>
+      <pre><code class="css">
+/* Flexbox Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  width: 30%;
+  background-color: #ccc;
+  padding: 20px;
+}
+      </code></pre>
+      <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+      <p>Explanation: Flexbox is a layout model that allows easy alignment of elements. This example creates a container with evenly spaced items aligned horizontally.</p>
+    </div>
+
+    <!-- Example Code Block 5 -->
+    <div class="code-block">
+      <h2>5. Responsive Design</h2>
+      <pre><code class="css">
+/* Responsive Design Example */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+      </code></pre>
+      <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+      <p>Explanation: This media query allows the layout to switch from a horizontal flexbox to a vertical flexbox on smaller screens, providing a responsive design.</p>
+    </div>
+  </section>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot" onclick="toggleChatbot()">💬</div>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chatbot-header">Chat with us</div>
+    <div class="chatbot-body">
+      <div class="messages" id="messages"></div>
+      <input type="text" id="chat-input" placeholder="Ask a question...">
+      <button class="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Click Route</p>
+      <p>Email: hmkhan11202@example.com</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" title="youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>   </div>
+    </div>
+    <p>&copy;Copy righted 2025 <span id="year"></span> Click Route. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function copyCode() {
+      const codeBlock = document.querySelector('pre code');
+      const range = document.createRange();
+      range.selectNode(codeBlock);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      alert('Code copied to clipboard!');
+    }
+
+    function toggleChatbot() {
+      const chatbotWindow = document.getElementById('chatbot-window');
+      chatbotWindow.style.display = chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '' ? 'block' : 'none';
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const messages = document.getElementById('messages');
+      if (input.value.trim() !== '') {
+        const userMessage = document.createElement('div');
+        userMessage.textContent = "You: " + input.value;
+        messages.appendChild(userMessage);
+        input.value = '';  // Clear the input field
+
+        // Simulate a chatbot reply (in a real case, this could be OpenAI integration)
+        const botMessage = document.createElement('div');
+        botMessage.textContent = "Bot: I'm here to help!";
+        messages.appendChild(botMessage);
+
+        messages.scrollTop = messages.scrollHeight; // Scroll to the bottom
+      }
+    }
+  </script>
+</body>
+</html>

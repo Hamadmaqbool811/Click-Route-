@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Python Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #2f3b52;
+            color: white;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .method, .fact {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #2575fc;
+        }
+        .method pre, .fact p {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .save-btn {
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .save-btn:hover {
+            background-color: #0097a7;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2f3b52;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Legendary Python Mastery Course</h1>
+        <p>Advanced Python techniques and facts for senior programmers.</p>
+    </header>
+
+    <!-- Content Section -->
+    <div class="container">
+
+        <!-- Python Facts -->
+        <div class="fact">
+            <h2>30 Python Facts Every Senior Programmer Knows</h2>
+            <p>1. Python is dynamically typed, meaning you don’t have to declare variable types.</p>
+            <p>2. Python’s `lambda` function allows creating small anonymous functions.</p>
+            <p>3. Python uses indentation (whitespace) to define blocks of code.</p>
+            <p>4. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+            <p>5. Python’s `__init__()` method is the constructor method in classes.</p>
+            <p>6. You can use Python’s `with` statement for resource management (context managers).</p>
+            <p>7. Python supports operator overloading, allowing you to define custom behavior for operators.</p>
+            <p>8. Python’s `asyncio` library provides support for asynchronous programming.</p>
+            <p>9. The Python `GIL` (Global Interpreter Lock) allows only one thread to execute Python bytecode at a time.</p>
+            <p>10. Python has strong support for integration with other languages, like C, C++, and Java.</p>
+            <p>11. Python’s `yield` keyword is used to create generators for memory-efficient iteration.</p>
+            <p>12. Python's `collections` module provides high-performance containers like `namedtuple` and `deque`.</p>
+            <p>13. Python supports multiple inheritance, which allows a class to inherit from more than one base class.</p>
+            <p>14. Python's `sys` module allows interacting with the interpreter’s environment and manipulating runtime configurations.</p>
+            <p>15. Python's `os` module gives access to operating system functionalities like file manipulation and process management.</p>
+            <p>16. Python supports dynamic and static polymorphism.</p>
+            <p>17. Python's `@staticmethod` and `@classmethod` decorators allow defining methods at the class level.</p>
+            <p>18. You can use Python's `unittest` framework for writing unit tests for your code.</p>
+            <p>19. Python supports multiple libraries for web development, like `Django`, `Flask`, and `FastAPI`.</p>
+            <p>20. Python’s `sorted()` function is a powerful way to sort iterables in a variety of ways.</p>
+            <p>21. Python has a built-in `pdb` debugger for stepping through code and finding bugs.</p>
+            <p>22. Python supports decorators, allowing you to modify functions and methods dynamically.</p>
+            <p>23. Python has extensive support for working with JSON data using the `json` module.</p>
+            <p>24. The Python `dataclasses` module provides a simple way to define classes without writing boilerplate code.</p>
+            <p>25. Python’s `itertools` module is a collection of tools for creating iterators and performing complex iteration tasks.</p>
+            <p>26. Python’s `subprocess` module is useful for spawning new processes and interacting with system commands.</p>
+            <p>27. Python's `multiprocessing` module allows for parallel execution using multiple processors.</p>
+            <p>28. Python has automatic garbage collection, which helps manage memory allocation and deallocation.</p>
+            <p>29. Python's `argparse` module is a great way to handle command-line arguments.</p>
+            <p>30. Python supports rich data types like lists, sets, tuples, and dictionaries for managing complex data.</p>
+        </div>
+
+        <!-- Advanced Methods of Python -->
+        <div class="method">
+            <h2>Advanced Python Methods & Code Examples</h2>
+            
+            <!-- Method 1: Using Generators for Efficient Iteration -->
+            <h3>1. Using Generators for Efficient Iteration</h3>
+            <p>Generators allow you to iterate over data without consuming a lot of memory.</p>
+            <pre>
+def my_generator():
+    for i in range(5):
+        yield i
+
+gen = my_generator()
+for value in gen:
+    print(value)
+            </pre>
+
+            <!-- Method 2: List Comprehensions for Cleaner Code -->
+            <h3>2. List Comprehensions for Cleaner Code</h3>
+            <p>List comprehensions provide a concise way to create lists.</p>
+            <pre>
+squares = [x**2 for x in range(10)]
+print(squares)
+            </pre>
+
+            <!-- Method 3: Using Decorators to Enhance Functions -->
+            <h3>3. Using Decorators to Enhance Functions</h3>
+            <p>Decorators allow you to modify the behavior of a function or method dynamically.</p>
+            <pre>
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+            </pre>
+
+            <!-- Method 4: Context Managers for Resource Management -->
+            <h3>4. Context Managers for Resource Management</h3>
+            <p>Context managers are used to manage resources, like file handling, automatically.</p>
+            <pre>
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+            </pre>
+
+        </div>
+
+        <!-- Save Button -->
+        <button class="save-btn" onclick="saveCourseContent()">Save this Course</button>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Legendary Python Mastery Course. Empowering Senior Programmers!</p>
+    </footer>
+
+    <script>
+        function saveCourseContent() {
+            alert("Your course content has been saved! (This is a simulated function, to be extended with a database or local storage).");
+        }
+    </script>
+
+</body>
+</html>

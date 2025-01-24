@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: transparent;
+            color: #fff;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar a:hover {
+            background-color: #00eaff;
+            border-radius: 5px;
+        }
+        .questions-section {
+            margin-top: 20px;
+        }
+        h2, h3 {
+            color: #2575fc;
+        }
+        .question {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        .question button {
+            padding: 10px 20px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .question button:hover {
+            background-color: #00eaff;
+        }
+        .feedback {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2575fc;
+            color: white;
+            margin-top: 40px;
+        }
+        .credits {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Courses</a>
+        <a href="#">Products</a>
+        <a href="#">News</a>
+        <a href="#">Certificates</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Python Programming Test</h1>
+        <p>Test your knowledge of Python with multiple-choice questions.</p>
+    </header>
+
+    <!-- Python MCQ Questions -->
+    <section class="questions-section">
+        <h2>Test Your Python Knowledge</h2>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What is the correct file extension for Python files?</h3>
+            <input type="radio" id="q1a1" name="q1" value="a1"> .python <br>
+            <input type="radio" id="q1a2" name="q1" value="a2"> .py <br>
+            <input type="radio" id="q1a3" name="q1" value="a3"> .p <br>
+            <button onclick="checkAnswer('q1', 'a2', 'Correct! Python files use .py extension.')">Submit</button>
+            <p id="q1-feedback" class="feedback"></p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Which keyword is used to define a function in Python?</h3>
+            <input type="radio" id="q2a1" name="q2" value="a1"> func <br>
+            <input type="radio" id="q2a2" name="q2" value="a2"> function <br>
+            <input type="radio" id="q2a3" name="q2" value="a3"> def <br>
+            <button onclick="checkAnswer('q2', 'a3', 'Correct! The keyword to define a function in Python is "def".')">Submit</button>
+            <p id="q2-feedback" class="feedback"></p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Which of the following is the correct syntax for a while loop in Python?</h3>
+            <input type="radio" id="q3a1" name="q3" value="a1"> while x > 0: <br>
+            <input type="radio" id="q3a2" name="q3" value="a2"> while (x > 0) <br>
+            <input type="radio" id="q3a3" name="q3" value="a3"> for (x > 0) <br>
+            <button onclick="checkAnswer('q3', 'a1', 'Correct! The correct syntax is "while x > 0:".')">Submit</button>
+            <p id="q3-feedback" class="feedback"></p>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. What does the `print()` function do in Python?</h3>
+            <input type="radio" id="q4a1" name="q4" value="a1"> It prints a string to the screen. <br>
+            <input type="radio" id="q4a2" name="q4" value="a2"> It stores the string in a file. <br>
+            <input type="radio" id="q4a3" name="q4" value="a3"> It creates a new variable. <br>
+            <button onclick="checkAnswer('q4', 'a1', 'Correct! The "print()" function is used to display output on the screen.')">Submit</button>
+            <p id="q4-feedback" class="feedback"></p>
+        </div>
+
+        <!-- Add the remaining questions here (5 to 20) following the same pattern -->
+
+        <!-- Credits Section -->
+        <div class="credits">
+            <p id="credits">You have earned 0 credits.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Python Robotics Course. Learn Python, Control Robots, and Build AI Systems.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        var credits = 0;
+
+        // Function to check answers
+        function checkAnswer(question, correctAnswer, feedback) {
+            var selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+            var feedbackElement = document.getElementById(`${question}-feedback`);
+            if (selectedAnswer) {
+                if (selectedAnswer.value === correctAnswer) {
+                    feedbackElement.innerHTML = feedback + ' You have earned 1 credit!';
+                    credits++;
+                    document.getElementById('credits').innerHTML = `You have earned ${credits} credits.`;
+                } else {
+                    feedbackElement.innerHTML = 'Wrong answer! ' + feedback;
+                }
+            } else {
+                feedbackElement.innerHTML = 'Please select an answer.';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Recognition Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #response {
+            margin-top: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            color: #333;
+        }
+        #speechBtn {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Voice Recognition Chatbot</h1>
+    <button id="speechBtn" onclick="startSpeechRecognition()">Start Speaking</button>
+
+    <div id="response">
+        <h3>Bot's Response:</h3>
+        <p id="output">...</p>
+    </div>
+
+    <script>
+        function startSpeechRecognition() {
+            // Start the voice recognition and get the text
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'en-US';
+
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                const userSpeech = event.results[0][0].transcript;
+                console.log("User said: " + userSpeech);
+                
+                // Send speech to the backend for processing
+                fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ speech: userSpeech })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Display bot's response
+                    document.getElementById("output").innerText = data.response;
+                    // Speak the bot's response
+                    speak(data.response);
+                });
+            };
+
+            recognition.onerror = function(event) {
+                console.error("Error occurred: " + event.error);
+            };
+        }
+
+        function speak(text) {
+            const speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+
+</body>
+</html>

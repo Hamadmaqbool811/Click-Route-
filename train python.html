@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Full Course: A to Z</title>
+    <!-- External Fonts (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 0;
+            height: 100%;
+        }
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Navbar Styling */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            z-index: 10;
+        }
+        nav a {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #2575fc;
+        }
+
+        /* Main Content Styling */
+        section {
+            margin-top: 60px; /* For space after navbar */
+            padding: 30px;
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #00eaff;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin: 15px 0;
+            color: #ffbc00;
+        }
+
+        pre {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #e91e63;
+            overflow-x: auto;
+        }
+
+        .important {
+            color: #ff0044;
+        }
+
+        /* Example Section for Code & Explanations */
+        .example-section {
+            margin-top: 40px;
+        }
+
+        .btn {
+            background: #00eaff;
+            padding: 15px 30px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #2575fc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#basics">Basics</a>
+        <a href="#oop">OOP</a>
+        <a href="#advanced">Advanced</a>
+        <a href="#robotics">Robotics</a>
+        <a href="#applications">Applications</a>
+        <a href="#data">Data</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Python Full Course: A to Z</h1>
+        <p>Learn Python from basics to advanced applications in AI, automation, robotics, and real-world problems</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Basic Python Concepts -->
+        <section id="basics">
+            <h2>1. Basic Python Concepts</h2>
+            <p>Python is a versatile and beginner-friendly programming language. Here's how you can use Python to perform basic operations, create variables, and work with loops.</p>
+
+            <h3>Example: Variables and Operations</h3>
+            <pre>
+# Example: Variables and Operations
+x = 10
+y = 5
+sum_xy = x + y
+print(f"Sum of {x} and {y}: {sum_xy}")
+            </pre>
+
+            <h3>Conditionals Example</h3>
+            <pre>
+# Example: Conditionals
+if x > y:
+    print(f"{x} is greater than {y}")
+else:
+    print(f"{y} is greater than {x}")
+            </pre>
+
+            <h3>Loops Example</h3>
+            <pre>
+# Example: For Loop
+for i in range(3):
+    print(f"Loop iteration {i}")
+
+# Example: While Loop
+count = 0
+while count < 3:
+    print(f"Count is {count}")
+    count += 1
+            </pre>
+        </section>
+
+        <!-- Object-Oriented Programming -->
+        <section id="oop">
+            <h2>2. Functions and Object-Oriented Programming (OOP)</h2>
+            <p>Functions help in organizing the code into reusable blocks. In Object-Oriented Programming (OOP), classes and objects help in organizing the data and behavior.</p>
+
+            <h3>Example: Defining a Function</h3>
+            <pre>
+# Example: Function
+def greet(name):
+    return f"Hello, {name}!"
+        
+print(greet("Alice"))
+            </pre>
+
+            <h3>Example: Object-Oriented Programming (OOP)</h3>
+            <pre>
+# Example: OOP with Dog Class
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def speak(self):
+        print(f"{self.name} says Woof!")
+
+dog1 = Dog("Buddy", "Golden Retriever")
+dog1.speak()
+            </pre>
+        </section>
+
+        <!-- Robotics and Automation Example -->
+        <section id="robotics">
+            <h2>3. Robotics and Automation with Python</h2>
+            <p>Python can be used to program robots or automated systems. Below is a simple example where we simulate a robot performing tasks.</p>
+
+            <h3>Example: Robot Arm Movement Simulation</h3>
+            <p>Here’s an example using Python to simulate controlling a robot's arm. We will use the `pyserial` library to communicate with the robot hardware, and the example shows simple motor control logic.</p>
+
+            <pre>
+# Example: Simulating a Robot Arm Movement
+
+import serial
+import time
+
+# Simulate connection to robot arm via serial port (change 'COM3' to your port)
+ser = serial.Serial('COM3', 9600, timeout=1)
+
+# Move the robot arm to specific positions
+def move_arm(position):
+    ser.write(position.encode())
+    time.sleep(1)
+
+# Simulate different movements
+move_arm("MOVE UP")
+move_arm("MOVE DOWN")
+move_arm("STOP")
+            </pre>
+            <p>Note: For actual robot control, you would need to connect to real hardware and send commands via serial or another communication protocol. You can use ROS (Robot Operating System) for more advanced projects.</p>
+
+            <h3>Example: Automated Task (Turn On/Off a Light)</h3>
+            <p>This example simulates controlling an automated system (like a light) with Python.</p>
+            <pre>
+# Example: Automated Task (Using GPIO pins on Raspberry Pi)
+import RPi.GPIO as GPIO
+
+# Set up GPIO pin (e.g., GPIO pin 17)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)
+
+# Turn on the light (set pin HIGH)
+GPIO.output(17, GPIO.HIGH)
+
+# Wait for 5 seconds
+time.sleep(5)
+
+# Turn off the light (set pin LOW)
+GPIO.output(17, GPIO.LOW)
+
+# Clean up GPIO
+GPIO.cleanup()
+            </pre>
+        </section>
+
+        <!-- Real-Life Applications -->
+        <section id="applications">
+            <h2>4. Real-Life Applications: AI, Speech Recognition, and Automation</h2>
+            <p>Python is widely used in building applications for AI, speech recognition, web automation, and more. Below are examples demonstrating these applications.</p>
+
+            <h3>Example: Speech-to-Text (Using Speech Recognition)</h3>
+            <pre>
+# Example: Speech-to-Text (requires speech_recognition library)
+import speech_recognition as sr
+
+recognizer = sr.Recognizer()
+with sr.Microphone() as source:
+    print("Listening for speech...")
+    audio = recognizer.listen(source)
+    try:
+        text = recognizer.recognize_google(audio)
+        print(f"You said: {text}")
+    except sr.UnknownValueError:
+        print("Sorry, I did not understand that.")
+    except sr.RequestError:
+        print("Error with the speech recognition service.")
+            </pre>
+
+            <h3>Example: Text-to-Speech (Using pyttsx3)</h3>
+            <pre>
+# Example: Text-to-Speech (requires pyttsx3 library)
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.say("Hello, I am your assistant.")
+engine.runAndWait()
+            </pre>
+        </section>
+
+        <!-- Data Analysis and Visualization -->
+        <section id="data">
+            <h2>5. Data Analysis and Visualization</h2>
+            <p>Python is one of the leading languages for data analysis and visualization using libraries such as pandas and matplotlib.</p>
+
+            <h3>Example: Data Analysis with Pandas</h3>
+            <pre>
+# Example: Data Analysis using pandas
+import pandas as pd
+
+data = {"Name": ["Alice", "Bob", "Charlie"], "Age": [25, 30, 35]}
+df = pd.DataFrame(data)
+print(df)
+            </pre>
+
+            <h3>Example: Data Visualization with Matplotlib</h3>
+            <p>Visualizing data using Python is easy with libraries like matplotlib.</p>
+            <pre>
+# Example: Data Visualization using matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.title("Sine Wave")
+plt.xlabel("x")
+plt.ylabel("sin(x)")
+plt.show()
+            </pre>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Python Full Course - Learn from Basics to Advanced Applications</p>
+    </footer>
+</body>
+</html>

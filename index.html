@@ -16,10 +16,10 @@
  
      </div>
     <ul>
-        <li><a href="Courses.html">Courses</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="Certificates.html">Certificates</a></li>
-        <li><a href="News.html">News</a></li>
+        <li><a href="Courses.html">COURSES</a></li>
+        <li><a href="products.html">ADVANCEMENT OF TECHNOLOGY</a></li>
+        <li><a href="Certificates.html">CERTIFIFCATES/DOMINS</a></li>
+        <li><a href="News.html">USE OF Different LANGUAGES</a></li>
     </ul>
    
     <div class="button-container">
@@ -95,6 +95,96 @@
     .content-item.hidden {
         display: none;
     }
+    @media (max-width: 720px) {
+            /* Adjustments for screens up to 720px */
+            h1 {
+                font-size: 28px; /* Slightly smaller font size for header */
+            }
+            img {
+    margin: 0px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+            /* Logo Styling */
+            .logo {
+                width: 60px; /* Make logo a bit smaller */
+            }
+
+            .search-container {
+            
+                align-items: center;
+                width: 100%;
+            }
+
+            .search-bar {
+                width: 80%; /* Make the search bar more responsive */
+                margin-bottom: 10px;
+            }
+
+            .search-button {
+                width: 80%; /* Make the search button also responsive */
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+                width: 710px;
+            }
+
+            ul li {
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+         
+            .content-item {
+                width: 100%; /* Content items take up full width on small screens */
+                padding: 10px;
+            }
+        }
+
+        /* For smaller screens, max-width 480px (optional) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px; /* Adjust title size for smaller screens */
+                margin-bottom: 15px;
+            }
+
+            .search-bar {
+                width: 90%; /* Make search bar even larger on small screens */
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .search-button {
+                width: 90%;
+                padding: 12px;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+     
+            }
+
+            .logo {
+                width: 50px; /* Further reduce logo size on very small screens */
+            }
+        }
+        
 </style>
 </head>
 <body>
@@ -108,31 +198,35 @@
 
 <!-- Courses Section -->
 <section class="content-section" id="coursesSection">
-    <h2 class="category-title">Courses</h2>
+    <h2 class="category-title">PYTHON</h2>
     <div class="content-list" id="coursesList">
-        <div class="content-item"><a href="web-development.html">Web Development</a></div>
-        <div class="content-item"><a href="data-science.html">Data Science</a></div>
-        <div class="content-item"><a href="machine-learning.html">Machine Learning</a></div>
-        <div class="content-item"><a href="ui-ux.html">UI/UX Design</a></div>
-        <div class="content-item"><a href="digital-marketing.html">Digital Marketing</a></div>
+        <div class="content-item"><a href="instal python.html">Install Python</a></div>
+        <div class="content-item"><a href="python.html">Python</a></div>
+        <div class="content-item"><a href="train python.html">Robotics Python</a></div>
+        <div class="content-item"><a href="speek python.html">speak with python</a></div>
+        <div class="content-item"><a href="test python.html">python exercise</a></div>
+        <div class="content-item"><a href="hero py.html">python Mastery </a></div>
+        <div class="content-item"><a href="ai python.html">python AI</a></div>
+        <div class="content-item"><a href="flask.html">python flask framework</a></div>
+        <div class="content-item"><a href="python web.py">python in web dev</a></div>
     </div>
 </section>
 
 <!-- News Section -->
 <section class="content-section" id="newsSection">
-    <h2 class="category-title">News</h2>
+    <h2 class="category-title">WEB DVELOPMENT</h2>
     <div class="content-list" id="newsList">
-        <div class="content-item">New JavaScript Features</div>
-        <div class="content-item">Data Privacy Updates</div>
-        <div class="content-item">Design Trends for 2025</div>
-        <div class="content-item">Artificial Intelligence in 2025</div>
-        <div class="content-item">Business Strategies for Growth</div>
+        <div class="content-item"><a href="HTML.html">HTML</a></div>
+        <div class="content-item"><a href="css.html">CSS</a></div>
+        <div class="content-item"><a href="javascript.html">JAVASCRIPT</a></div>
+        <div class="content-item"><a href="javasc.html"> JAVASCRIPT advance</a></div>
+        <div class="content-item"><a href="web.html"> WEB DEVELOPMENT PROJECTS</a></div>
     </div>
 </section>
 
 <!-- Products Section -->
 <section class="content-section" id="productsSection">
-    <h2 class="category-title">Products</h2>
+    <h2 class="category-title">JAVA</h2>
     <div class="content-list" id="productsList">
         <div class="content-item">Laptop</div>
         <div class="content-item">Smartphone</div>
@@ -144,13 +238,40 @@
 
 <!-- Certificates Section -->
 <section class="content-section" id="certificatesSection">
-    <h2 class="category-title">Certificates</h2>
+    <h2 class="category-title">C++</h2>
     <div class="content-list" id="certificatesList">
         <div class="content-item">Web Development Certification</div>
         <div class="content-item">Data Science Certification</div>
         <div class="content-item">AI and ML Certification</div>
         <div class="content-item">Digital Marketing Certificate</div>
         <div class="content-item">Graphic Design Certification</div>
+    </div>
+<section class="content-section" id="certificatesSection">
+    <h2 class="category-title">C#</h2>
+    <div class="content-list" id="certificatesList">
+        <div class="content-item">Web Development Certification</div>
+        <div class="content-item">Data Science Certification</div>
+        <div class="content-item">AI and ML Certification</div>
+        <div class="content-item">Digital Marketing Certificate</div>
+        <div class="content-item">Graphic Design Certification</div>
+    </div>
+<section class="content-section" id="certificatesSection">
+    <h2 class="category-title">APP DEVELOPMENT</h2>
+    <div class="content-list" id="certificatesList">
+        <div class="content-item">Web APP</div>
+        <div class="content-item">MOBILE APP</div>
+        <div class="content-item">DESKTOP APP</div>
+        <div class="content-item">MULTI-Media APP</div>
+        <div class="content-item">ADVANCE APP MANAJMENT</div>
+    </div>
+<section class="content-section" id="certificatesSection">
+    <h2 class="category-title">AI (artificial intelligence)</h2>
+    <div class="content-list" id="certificatesList">
+        <div class="content-item">WEAK AI</div>
+        <div class="content-item">STRONG AI</div>
+        <div class="content-item">SUPER AI`</div>
+        <div class="content-item">MACHINE Learning</div>
+        <div class="content-item">DEEP Learning</div>
     </div>
 </section>
 <script>
